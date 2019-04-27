@@ -36,3 +36,8 @@ order by salary * months desc;
 /* add and round */
 select round(sum(lat_n),2), round(sum(long_w),2) 
 from station;
+
+/* Like Excel's =sumif() */
+select truncate(sum(lat_n),4) 
+from station 
+where lat_n between 38.788 and 137.2345;
