@@ -26,3 +26,9 @@ from city
 join country
 on city.countrycode = country.code
 group by country.continent;
+
+/* Strange queries */
+select top 1 salary * months, count(*) 
+from employee 
+group by salary * months 
+order by salary * months desc;
