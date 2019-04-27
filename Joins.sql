@@ -28,7 +28,7 @@ on city.countrycode = country.code
 group by country.continent;
 
 /* This is getting out of hand */
-SELECT h.hacker_id, h.name
+SELECT h.hacker_id, h.name, sum(s.score)
   FROM submissions s
   INNER JOIN challenges c
     ON s.challenge_id = c.challenge_id
