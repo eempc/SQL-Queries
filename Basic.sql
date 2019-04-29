@@ -18,3 +18,7 @@ select top 1 round(long_w,4)
 from station 
 where lat_n < 137.2345 
 order by lat_n desc;
+
+SELECT TOP 1 CAST(LONG_W AS DECIMAL (10,4)) FROM STATION
+WHERE LAT_N > 38.778
+ORDER BY LAT_N ASC;
