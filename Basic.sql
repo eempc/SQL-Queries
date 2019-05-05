@@ -1,8 +1,8 @@
 /* Strange queries */
-select top 1 salary * months, count(*) 
-from employee 
-group by salary * months 
-order by salary * months desc;
+SELECT TOP 1 salary * months, COUNT(*) 
+FROM employee 
+GROUP BY salary * months 
+ORDER BY salary * months DESC;
 
 /* add and round */
 select round(sum(lat_n),2), round(sum(long_w),2) 
