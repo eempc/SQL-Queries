@@ -5,8 +5,8 @@ GROUP BY salary * months
 ORDER BY salary * months DESC;
 
 /* add and round */
-select round(sum(lat_n),2), round(sum(long_w),2) 
-from station;
+SELECT round(sum(lat_n),2), round(sum(long_w),2) 
+FROM station;
 
 /* Like Excel's =sumif() */
 select truncate(sum(lat_n),4) 
