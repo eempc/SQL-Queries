@@ -9,9 +9,9 @@ SELECT ROUND(SUM(lat_n),2), ROUND(SUM(long_w),2)
 FROM station;
 
 /* Like Excel's =sumif() */
-select truncate(sum(lat_n),4) 
-from station 
-where lat_n between 38.788 and 137.2345;
+SELECT TRUNCATE(SUM(lat_n),4) 
+FROM station 
+WHERE lat_n BETWEEN 38.788 AND 137.2345;
 
 /* What is the longitude of the northernmost station below latitude 137 */
 select top 1 round(long_w,4) 
