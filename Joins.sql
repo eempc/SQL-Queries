@@ -11,11 +11,11 @@ WHERE Country.continent = "Asia";
 /*Given the CITY and COUNTRY tables, query the names of all cities where the CONTINENT is 'Africa'.
 Note: CITY.CountryCode and COUNTRY.Code are matching key columns.*/
 
-SELECT city.name 
-FROM city
-JOIN country
-ON city.countrycode = country.code
-WHERE country.continent = "Africa";
+SELECT City.name 
+FROM City
+JOIN Country
+ON City.countrycode = Country.code
+WHERE Country.continent = "Africa";
 
 
 /*Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
