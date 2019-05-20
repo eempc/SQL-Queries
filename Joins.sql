@@ -21,11 +21,11 @@ WHERE Country.continent = "Africa";
 /*Given the CITY and COUNTRY tables, query the names of all the continents (COUNTRY.Continent) and their respective average city populations (CITY.Population) rounded down to the nearest integer.
 Note: CITY.CountryCode and COUNTRY.Code are matching key columns.*/
 
-SELECT DISTINCT country.continent, AVG(city.population)
-FROM city
-JOIN country
-ON city.countrycode = country.code
-GROUP BY country.continent;
+SELECT DISTINCT Country.continent, AVG(City.population)
+FROM City
+JOIN Country
+ON City.countrycode = Country.code
+GROUP BY Country.continent;
 
 /* This is getting out of hand */
 SELECT h.hacker_id, h.name, sum(s.score)
