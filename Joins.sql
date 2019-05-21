@@ -28,13 +28,13 @@ ON City.countrycode = Country.code
 GROUP BY Country.continent;
 
 /* This is getting out of hand */
-SELECT h.hacker_id, h.name, sum(s.score)
-  FROM submissions s
-  INNER JOIN challenges c
+SELECT h.hacker_id, h.name, Sum(s.score)
+  FROM Submissions s
+  INNER JOIN Challenges c
     ON s.challenge_id = c.challenge_id
-  INNER JOIN difficulty d
+  INNER JOIN Difficulty d
     ON c.difficulty_level = d.difficulty_level 
-  INNER JOIN hackers h
+  INNER JOIN Hackers h
     ON s.hacker_id = h.hacker_id
 WHERE s.score = d.score AND c.difficulty_level = d.difficulty_level
 GROUP BY h.hacker_id, h.name
